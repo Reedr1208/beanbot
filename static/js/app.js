@@ -40,7 +40,7 @@ document.addEventListener("keydown", (e) => {
 /* === Chat API Logic === */
 // For local development, this assumes the backend runs on port 3000 (e.g. `vercel dev`).
 // In production, when hosted on GitHub Pages, this should point to your Vercel deployment URL.
-const DEV_API_URL = "http://localhost:3000/api/chat"; 
+const DEV_API_URL = "https://beanbot-sage.vercel.app/api/chat";
 
 const chatForm = document.getElementById("chatForm");
 const chatInput = document.getElementById("chatInput");
@@ -88,7 +88,7 @@ if (chatForm) {
       // Use absolute URL or relative depending on deployment
       // NOTE: Replace the production URL with your actual Vercel project domain!
       const targetUrl = window.location.hostname.includes("github.io") 
-        ? "https://your-vercel-api-endpoint.vercel.app/api/chat" // <-- ACTION REQUIRED: Replace this!
+        ? "https://beanbot-sage.vercel.app/api/chat" // <-- ACTION REQUIRED: Replace this!
         : DEV_API_URL;
 
       const response = await fetch(targetUrl, {
