@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adopt Beans</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="pill">Available for adoption</div>
+        <h1>Meet Beans</h1>
+        <p class="hero-text">
+          Beans is a sweet, goofy, cuddle-loving boy who’s looking for a calm,
+          loving home where he can keep blossoming.
+        </p>
+
+        <div class="hero-actions">
+          <button class="primary-btn" id="openChatButton">Chat with Beans</button>
+          <a class="secondary-btn" href="#about">Learn more</a>
+        </div>
+
+        <div class="quick-facts">
+          <div class="fact-card">
+            <div class="fact-label">Age</div>
+            <div class="fact-value">~5 years</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-label">Size</div>
+            <div class="fact-value">55 lb</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-label">Home style</div>
+            <div class="fact-value">Low-key + loving</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="beansball.png" alt="Beans lying down with a tennis ball" class="hero-image" />
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-header">
+        <h2>Why people love Beans</h2>
+        <p>
+          He’s the best of both worlds: ready for an adventure, then fully prepared
+          to become a professional couch snuggler.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Big cuddle energy</h3>
+          <p>
+            Beans loves naps, snuggles, and being close to his people. He is a
+            world-class couch companion.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Adventure approved</h3>
+          <p>
+            Walks, car rides, exploring, catching tossed treats, and hose time?
+            Extremely yes.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Smart + treat-powered</h3>
+          <p>
+            He knows sit, paw, down, and wait, and he is very motivated by snacks
+            and praise.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Needs a patient home</h3>
+          <p>
+            Beans has been through a lot and does best with gentle introductions,
+            predictable routines, and respect for his boundaries.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section story-section">
+      <div class="story-copy">
+        <div class="section-header left">
+          <h2>Beans’ story</h2>
+          <p>
+            Shelter life was hard on him, but in foster care he showed everyone
+            what a loving, funny, deeply good dog he really is.
+          </p>
+        </div>
+
+        <div class="story-body">
+          <p>
+            Beans thrives when he feels safe. He does best in a calm home with no
+            other animals, slow introductions, and humans who understand that
+            trust can take a little time.
+          </p>
+          <p>
+            Once he settles in, you get the full Beans package: cuddles, goofy
+            upside-down lounging, happy walkies, snack-catching talent, and elite
+            hose-related enthusiasm.
+          </p>
+        </div>
+
+        <button class="primary-btn" id="openChatButton2">Ask Beans a question</button>
+      </div>
+
+      <div class="story-media-card">
+        <img src="beanswater.png" alt="Beans playing in water" class="story-image" />
+      </div>
+    </section>
+
+    <section class="section fit-section">
+      <div class="section-header">
+        <h2>Best fit for Beans</h2>
+      </div>
+
+      <div class="fit-grid">
+        <div class="fit-box">
+          <h3>Great match</h3>
+          <ul>
+            <li>Calm, patient home</li>
+            <li>Adults or older kids</li>
+            <li>Predictable routine</li>
+            <li>People who enjoy cuddles and walks</li>
+          </ul>
+        </div>
+
+        <div class="fit-box caution">
+          <h3>Important to know</h3>
+          <ul>
+            <li>Should be the only animal in the home</li>
+            <li>Needs slow introductions to new people</li>
+            <li>Can be reactive around other dogs</li>
+            <li>Does best when not pressured</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="chat-panel" id="chatPanel" aria-hidden="true">
+    <div class="chat-header">
+      <div class="chat-header-left">
+        <img src="beanswater.png" alt="Beans avatar" class="avatar" />
+        <div>
+          <div class="title">Chat with Beans</div>
+          <div class="subtitle">Ask about his routine, likes, and ideal home</div>
+        </div>
+      </div>
+      <button class="close-btn" id="closeChatButton" aria-label="Close chat">×</button>
+    </div>
+
+    <div class="chat-frame-wrap">
+      <iframe
+        class="chat-frame"
+        src="http://127.0.0.1:7860"
+        title="Beans chat"
+      ></iframe>
+    </div>
+  </div>
+
+  <button class="chat-launcher" id="launcher" aria-label="Open chat">
+    <img src="beanswater.png" alt="" class="launcher-avatar" />
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>
