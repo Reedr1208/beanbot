@@ -56,7 +56,7 @@ function appendMessage(role, text) {
   if (role === "assistant") {
     const label = document.createElement("div");
     label.classList.add("message-label");
-    label.innerHTML = '<span class="emoji">💬</span> Chatbot';
+    label.innerHTML = '<span class="emoji">💬</span> Beans';
     wrapper.appendChild(label);
   }
 
