@@ -50,12 +50,23 @@ const typingIndicator = document.getElementById("typingIndicator");
 let conversationHistory = []; // Maintains conversation context for the LLM
 
 function appendMessage(role, text) {
+  const wrapper = document.createElement("div");
+  wrapper.classList.add("message-wrapper", role);
+
+  if (role === "assistant") {
+    const label = document.createElement("div");
+    label.classList.add("message-label");
+    label.innerHTML = '<span class="emoji">💬</span> Chatbot';
+    wrapper.appendChild(label);
+  }
+
   const bubble = document.createElement("div");
-  bubble.classList.add("chat-bubble", role);
-  bubble.textContent = text;
+  bubble.classList.add("message-bubble");
+  bubble.innerHTML = text.replace(/\n/g, "<br>");
+  wrapper.appendChild(bubble);
   
   // Insert immediately before the typing indicator
-  chatHistory.insertBefore(bubble, typingIndicator);
+  chatHistory.insertBefore(wrapper, typingIndicator);
   chatHistory.scrollTop = chatHistory.scrollHeight;
 }
 

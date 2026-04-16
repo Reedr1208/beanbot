@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ .Site.Title }}</title>
   <link rel="stylesheet" href="{{ "css/styles.css" | relURL }}" />
 </head>
+
 <body>
   <main class="page">
     <section class="hero">
@@ -39,7 +41,8 @@
       </div>
 
       <div class="hero-media">
-        <img src="{{ "images/beansball.png" | relURL }}" alt="Beans lying down with a tennis ball" class="hero-image" />
+        <img src="{{ "images/beansball.png" | relURL }}" alt="Beans lying down with a tennis ball"
+          class="hero-image" />
       </div>
     </section>
 
@@ -160,14 +163,34 @@
     </div>
 
     <div class="chat-frame-wrap" id="chatWrap">
-        <div class="chat-history" id="chatHistory">
-            <div class="chat-bubble assistant">heloo fren!! i am Beans. i am very good at cuddles an also very good at bein a handsome boy. what answers can i get u?</div>
-            <div class="typing-indicator" id="typingIndicator">Beans is typing...</div>
+      <div class="gradio-inner-header">
+        <h2>Chat with Beans</h2>
+        <p>Ask Beans about naps, walkies, cuddles, or his ideal home.</p>
+      </div>
+
+      <div class="chat-history" id="chatHistory">
+        <div class="message-wrapper assistant">
+          <div class="message-label"><span class="emoji">💬</span> Chatbot</div>
+          <div class="message-bubble">heloo fren!! i am Beans. i am very good at cuddles an also very good at bein a
+            handsome boy. what answers can i get u?</div>
         </div>
-        <form class="chat-input-area" id="chatForm">
-            <input type="text" id="chatInput" placeholder="Type a message to Beans..." autocomplete="off" />
-            <button type="submit" class="primary-btn shrink">Send</button>
-        </form>
+        <div class="typing-indicator" id="typingIndicator">Beans is typing...</div>
+      </div>
+
+      <form class="chat-input-area" id="chatForm">
+        <input type="text" id="chatInput" autocomplete="off" />
+        <button type="submit" class="send-icon-btn" aria-label="Send">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+
+      <div class="gradio-footer">
+        Built with Gradio <span class="gradio-hexagon">⬡</span> &middot; Settings <span class="gradio-cog">⚙</span>
+      </div>
     </div>
   </div>
 
@@ -177,4 +200,5 @@
 
   <script src="{{ "js/app.js" | relURL }}"></script>
 </body>
+
 </html>
