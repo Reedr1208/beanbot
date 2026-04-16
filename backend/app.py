@@ -8,8 +8,9 @@ APP_TITLE = "Chat with Beans"
 PROMPT_FILE = Path(__file__).parent / "systemprompt.txt"
 DEFAULT_PERSONALITY = PROMPT_FILE.read_text(encoding="utf-8")
 
-KEY_FILE = Path(__file__).parent / "openaikey.txt"
-APIKEY = KEY_FILE.read_text(encoding="utf-8").strip()
+# In the future, the OpenAI API key should be loaded securely, e.g., via environment variables.
+# APIKEY = os.environ.get("OPENAI_API_KEY")
+APIKEY = ""
 
 client = OpenAI(api_key=APIKEY)
 
