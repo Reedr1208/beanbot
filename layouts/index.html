@@ -18,8 +18,7 @@
         </p>
 
         <div class="hero-actions">
-          <!-- Chatbot button disabled for now -->
-          <!-- <button class="primary-btn" id="openChatButton">Chat with Beans</button> -->
+          <button class="primary-btn" id="openChatButton">Chat with Beans</button>
           <a class="secondary-btn" href="#about">Learn more</a>
         </div>
 
@@ -111,8 +110,7 @@
           </p>
         </div>
 
-        <!-- Chatbot button disabled for now -->
-        <!-- <button class="primary-btn" id="openChatButton2">Ask Beans a question</button> -->
+        <button class="primary-btn" id="openChatButton2">Ask Beans a question</button>
       </div>
 
       <div class="story-media-card">
@@ -149,8 +147,6 @@
     </section>
   </main>
 
-  <!-- Chat Panel disabled for now -->
-  <!--
   <div class="chat-panel" id="chatPanel" aria-hidden="true">
     <div class="chat-header">
       <div class="chat-header-left">
@@ -163,20 +159,22 @@
       <button class="close-btn" id="closeChatButton" aria-label="Close chat">×</button>
     </div>
 
-    <div class="chat-frame-wrap">
-      <iframe
-        class="chat-frame"
-        src="http://127.0.0.1:7860"
-        title="Beans chat"
-      ></iframe>
+    <div class="chat-frame-wrap" id="chatWrap">
+        <div class="chat-history" id="chatHistory">
+            <div class="chat-bubble assistant">heloo fren!! i am Beans. i am very good at cuddles an also very good at bein a handsome boy. what answers can i get u?</div>
+            <div class="typing-indicator" id="typingIndicator">Beans is typing...</div>
+        </div>
+        <form class="chat-input-area" id="chatForm">
+            <input type="text" id="chatInput" placeholder="Type a message to Beans..." autocomplete="off" />
+            <button type="submit" class="primary-btn shrink">Send</button>
+        </form>
     </div>
   </div>
 
   <button class="chat-launcher" id="launcher" aria-label="Open chat">
     <img src="{{ "images/beanswater.png" | relURL }}" alt="" class="launcher-avatar" />
   </button>
-  -->
 
-  <!-- <script src="{{ "js/app.js" | relURL }}"></script> -->
+  <script src="{{ "js/app.js" | relURL }}"></script>
 </body>
 </html>
